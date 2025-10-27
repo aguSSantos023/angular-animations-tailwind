@@ -8,5 +8,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('angular-animations-tailwind');
+  protected readonly title = signal('Hello, angular-animations-tailwind');
 }
