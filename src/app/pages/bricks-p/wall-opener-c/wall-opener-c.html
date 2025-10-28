@@ -1,0 +1,22 @@
+<div class="flex flex-col items-center justify-center min-h-screen bg-black overflow-hidden">
+  <div
+    class="wall-container flex flex-col items-center overflow-hidden -mt-5"
+    [class.wall-open]="isOpen()"
+  >
+    @for (row of wallStructure().reverse(); track row.bricks[0].id) {
+
+      <div
+        class="flex justify-center gap-x-1 mb-1">
+        @for (brick of row.bricks; track brick.id) {
+
+          <app-animated-brick-c
+            [brickData]="brick"
+            [isOpening]="isOpen()"
+          />
+
+        }
+      </div>
+
+    }
+  </div>
+</div>
