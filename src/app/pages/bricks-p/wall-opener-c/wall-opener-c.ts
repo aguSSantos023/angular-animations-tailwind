@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, signal } from '@angular/core';
+import { AfterViewInit, Component, input, signal } from '@angular/core';
 import { Brick, RowBricks } from './brick-interface';
 import { AnimatedBrickC } from "./animated-brick-c/animated-brick-c";
 
@@ -10,7 +10,7 @@ import { AnimatedBrickC } from "./animated-brick-c/animated-brick-c";
 })
 export class WallOpenerC implements AfterViewInit {
 
-  private initialDelay = signal<number>(2); // Delay before animation starts
+  initialDelay = input.required<number>(); // Delay before animation starts
   private horizontalDelayIncrement = signal<number>(0.2);
   private verticalDelayIncrement = signal<number>(0.05)
   public isOpen = signal<boolean>(false); // Variable to control whether the animation should start

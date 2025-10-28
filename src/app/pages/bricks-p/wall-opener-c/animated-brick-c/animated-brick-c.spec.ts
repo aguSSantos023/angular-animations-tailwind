@@ -1,9 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AnimatedBrickC } from './animated-brick-c';
 
+const MOCK_BRICK_DATA = {
+  delay: 0,
+  direction: 'none',
+  width: 50,
+  height: 50
+};
+
+const MOCK_IS_OPENING = false;
+
 describe('AnimatedBrickC', () => {
-  let component: AnimatedBrickC;
   let fixture: ComponentFixture<AnimatedBrickC>;
 
   beforeEach(async () => {
@@ -13,11 +20,14 @@ describe('AnimatedBrickC', () => {
     .compileComponents();
 
     fixture = TestBed.createComponent(AnimatedBrickC);
-    component = fixture.componentInstance;
+
+    fixture.componentRef.setInput('brickData', MOCK_BRICK_DATA);
+    fixture.componentRef.setInput('isOpening', MOCK_IS_OPENING);
+
     fixture.detectChanges();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(fixture.componentInstance).toBeTruthy();
   });
 });
