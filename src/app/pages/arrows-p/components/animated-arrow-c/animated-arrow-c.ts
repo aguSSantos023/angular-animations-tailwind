@@ -8,18 +8,18 @@ import { Component, input } from '@angular/core';
 export class AnimatedArrowC {
   distance = input<number>(60);
   duration = input<number>(1.5);
+  delay = input<number>(0);
   color = input<string>('text-orange-500');
-
 
 
   get styles() {
     const shaftOriginalLength = 30;
     const stretchFactor = 1 + (this.distance() / shaftOriginalLength);
-
     return {
       '--arrow-distance': `${this.distance()}px`,
       '--arrow-duration': `${this.duration()}s`,
-      '--arrow-stretch': stretchFactor.toString()
+      '--arrow-delay': `${this.delay()}s`,
+      '--arrow-stretch': stretchFactor.toString(),
     };
   }
 
