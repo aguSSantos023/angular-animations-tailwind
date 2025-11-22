@@ -16,14 +16,4 @@ describe('App', () => {
     expect(app).toBeTruthy();
   });
 
-  test('should render title', () => {
-    const fixture = TestBed.createComponent(App);
-    fixture.detectChanges();
-
-    const compiled = fixture.nativeElement as HTMLElement;
-
-    const h1Element = compiled.querySelector('h1') as HTMLElement;
-
-    expect(h1Element.textContent).toContain('Hello, angular-animations-tailwind');
-  });
 });

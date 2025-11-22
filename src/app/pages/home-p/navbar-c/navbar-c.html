@@ -1,0 +1,17 @@
+<nav>
+  <ul>
+    @for (route of routes(); track $index) {
+      <li>
+        <a
+          [routerLink]="route.path"
+          class="text-xl sm:text-2xl text-white font-fascinate block
+          transform transition duration-300 ease-in-out px-3 py-1 rounded-md
+          hover:scale-110 hover:blur-xs
+          focus:scale-110 focus:blur-xs"
+          >
+          {{ route.title }}
+        </a>
+      </li>
+    }
+  </ul>
+</nav>

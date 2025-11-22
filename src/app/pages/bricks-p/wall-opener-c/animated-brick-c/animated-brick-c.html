@@ -1,0 +1,6 @@
+<div
+  class="brick w-20 h-8 bg-black border-2 border-white rounded-md"
+  [class.open-left]="isOpening() && brickData().direction === 'left'"
+  [class.open-right]="isOpening() && brickData().direction === 'right'"
+  [style.--delay]="brickData().delay + 's'">
+</div>

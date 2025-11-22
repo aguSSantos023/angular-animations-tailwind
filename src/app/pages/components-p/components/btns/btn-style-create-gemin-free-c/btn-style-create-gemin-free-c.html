@@ -1,0 +1,12 @@
+<button
+  (click)="onClick()"
+  [class.active]="isActive"
+  [class.executing]="isExecuting"
+  [style.--button-color]="color"
+  [disabled]="isExecuting"
+>
+  <span class="text-content">
+    {{ isExecuting ? 'Ejecutando...' : text }}
+  </span>
+  <div class="color-fill"></div>
+</button>

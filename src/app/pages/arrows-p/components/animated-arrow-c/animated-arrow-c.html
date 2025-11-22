@@ -1,0 +1,31 @@
+<div class="flex items-center justify-center">
+  <svg
+    [style]="styles"
+    [class]="'arrow-icon w-12 ' + color()"
+    [style.height.px]="distance()"
+    viewBox="0 100 100 200"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="8"
+    stroke-linecap="round"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g class="shaft-fixed">
+      <line x1="50" y1="20" x2="50" y2="120" />
+    </g>
+
+    <g class="shaft-animated">
+      <line x1="50" y1="120" x2="50" y2="145" />
+    </g>
+
+    <g class="tip-animated">
+      <polygon
+        points="35,145 65,145 50,165"
+        fill="currentColor"
+        stroke="currentColor"
+        stroke-width="8"
+        stroke-linejoin="round"
+      />
+    </g>
+  </svg>
+</div>

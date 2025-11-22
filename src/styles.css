@@ -1,2 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
+
+@font-face {
+  font-family: Fascinate-Regular;
+  src: url('./app/assets/fonts/Fascinate-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@theme {
+  --font-fascinate: "Fascinate-Regular", sans-serif; /* Aquí configuras tu fuente */
+
+}
+
+
+
+
+

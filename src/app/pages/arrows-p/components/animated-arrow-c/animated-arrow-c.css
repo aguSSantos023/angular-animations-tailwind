@@ -1,0 +1,24 @@
+@keyframes stretch {
+  0% { transform: scaleY(1); }
+  35% { transform: scaleY(var(--arrow-stretch, 2)); }
+  70% { transform: scaleY(1); }
+  100% { transform: scaleY(1); } /* Pausa del 70% al 100% */
+}
+
+@keyframes moveTip {
+  0% { transform: translateY(0); }
+  35% { transform: translateY(var(--arrow-distance, 60px)); }
+  70% { transform: translateY(0); }
+  100% { transform: translateY(0); } /* Pausa del 70% al 100% */
+}
+
+.shaft-animated {
+  transform-origin: 50% 59%;
+  animation: stretch var(--arrow-duration, 1.5s) ease-in-out infinite;
+  animation-delay: var(--arrow-delay, 0s);
+}
+
+.tip-animated {
+  animation: moveTip var(--arrow-duration, 1.5s) ease-in-out infinite;
+  animation-delay: var(--arrow-delay, 0s);
+}
